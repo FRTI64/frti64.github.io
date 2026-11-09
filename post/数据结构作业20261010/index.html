@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/file/-2g46xm.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/file/-2g46xm.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="/lib/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="/lib/animate.css/animate.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"frti64.top","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"stackoverflow-light","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="数据结构作业20261010">
+<meta property="og:url" content="https://frti64.top/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A20261010/">
+<meta property="og:site_name" content="FRTI64&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-10-10T18:08:48.000Z">
+<meta property="article:author" content="FRTI64">
+<meta property="article:tag" content="FRTI64">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://frti64.top/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A20261010/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://frti64.top/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A20261010/","path":"/post/数据结构作业20261010/","title":"数据结构作业20261010"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据结构作业20261010 | FRTI64's blog</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="/lib/hexo-generator-searchdb/dist/search.js" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","display_overflow":"scroll","js":{"url":"/lib/mathjax/tex-mml-chtml.js"},"font_path":"/lib/@mathjax/mathjax-newcm-font"}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="FRTI64's blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-search popup-trigger" aria-label="搜索" role="button">
+      <i class="fa fa-search fa-fw fa-lg"></i>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FRTI64's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">超限爆闪! </p>
+      <img class="custom-logo-image" src="/file/-2g46xm.jpg" alt="FRTI64's blog">
+  </div>
+
+  <div class="site-nav-toggle" aria-label="切换导航栏" role="button">
+      <i class="fa fa-ellipsis fa-fw fa-lg"></i>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  
+  <template id="search-popup-template"><div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div></template>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="nav-text">第六章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#22"><span class="nav-text">22.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23"><span class="nav-text">23.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30"><span class="nav-text">30.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31"><span class="nav-text">31.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32"><span class="nav-text">32.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#39"><span class="nav-text">39.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#15"><span class="nav-text">(15)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16"><span class="nav-text">(16)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#40"><span class="nav-text">40.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#17"><span class="nav-text">(17)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18"><span class="nav-text">(18)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#41"><span class="nav-text">41.</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#19"><span class="nav-text">(19)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20"><span class="nav-text">(20)</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FRTI64"
+      src="/file/-2g46xm.jpg">
+  <p class="site-author-name" itemprop="name">FRTI64</p>
+  <div class="site-description" itemprop="description">关山难越，谁悲失路之人；萍水相逢，尽是他乡之客。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/FRTI64" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;FRTI64" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:frti64@outlook.com" title="E-Mail → mailto:frti64@outlook.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://frti64.top/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A20261010/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/file/-2g46xm.jpg">
+      <meta itemprop="name" content="FRTI64">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FRTI64's blog">
+      <meta itemprop="description" content="关山难越，谁悲失路之人；萍水相逢，尽是他乡之客。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数据结构作业20261010 | FRTI64's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据结构作业20261010<a href="https://vscode.dev/github/FRTI64/frti64-site/blob/pages/source/_posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BD%9C%E4%B8%9A20261010.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：1791655728000 1791655728000" itemprop="dateCreated datePublished" datetime="2026-10-10T18:08:48+00:00">1791655728000</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><center></center>
+<span id="more"></span>
+
+<h1 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h1><hr>
+<h2 id="22"><a href="#22" class="headerlink" title="22."></a>22.</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="type">void</span> chain&lt;T&gt;::<span class="built_in">split</span>(chain&lt;T&gt; &amp;a, chain&lt;T&gt; &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">    a.<span class="built_in">clear</span>();</span><br><span class="line">    b.<span class="built_in">clear</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (firstNode == <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    chainNode&lt;T&gt; *current = firstNode;</span><br><span class="line">    chainNode&lt;T&gt; *lastA = <span class="literal">nullptr</span>;</span><br><span class="line">    chainNode&lt;T&gt; *lastB = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="type">int</span> index = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (current != <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        chainNode&lt;T&gt; *nextNode = current-&gt;next;</span><br><span class="line">        current-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (index % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a.firstNode == <span class="literal">nullptr</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                a.firstNode = current;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                lastA-&gt;next = current;</span><br><span class="line">            &#125;</span><br><span class="line">            lastA = current;</span><br><span class="line">            a.listSize++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (b.firstNode == <span class="literal">nullptr</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                b.firstNode = current;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                lastB-&gt;next = current;</span><br><span class="line">            &#125;</span><br><span class="line">            lastB = current;</span><br><span class="line">            b.listSize++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        current = nextNode;</span><br><span class="line">        index++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    firstNode = <span class="literal">nullptr</span>;</span><br><span class="line">    listSize = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(n)$</p>
+<p>空间复杂度为 $\Theta(1)$</p>
+<hr>
+<h2 id="23"><a href="#23" class="headerlink" title="23."></a>23.</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="type">void</span> extendedChain&lt;T&gt;::<span class="built_in">circularShift</span>(<span class="type">int</span> i)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>-&gt;listSize &lt;= <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> k = i % <span class="keyword">this</span>-&gt;listSize;</span><br><span class="line">    <span class="keyword">if</span> (k &lt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        k += <span class="keyword">this</span>-&gt;listSize;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (k == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>-&gt;lastNode-&gt;next = <span class="keyword">this</span>-&gt;firstNode;</span><br><span class="line"></span><br><span class="line">    chainNode&lt;T&gt; *newLast = <span class="keyword">this</span>-&gt;firstNode;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> step = <span class="number">0</span>; step &lt; k - <span class="number">1</span>; ++step)</span><br><span class="line">    &#123;</span><br><span class="line">        newLast = newLast-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>-&gt;firstNode = newLast-&gt;next;</span><br><span class="line">    newLast-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="keyword">this</span>-&gt;lastNode = newLast;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="30"><a href="#30" class="headerlink" title="30."></a>30.</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="type">void</span> circularList&lt;T&gt;::<span class="built_in">reverse</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (listSize &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    chainNode&lt;T&gt; *prev = firstNode;</span><br><span class="line">    chainNode&lt;T&gt; *curr = firstNode-&gt;next;</span><br><span class="line">    chainNode&lt;T&gt; *nextNode = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (curr != firstNode)</span><br><span class="line">    &#123;</span><br><span class="line">        nextNode = curr-&gt;next;</span><br><span class="line">        curr-&gt;next = prev;</span><br><span class="line">        prev = curr;</span><br><span class="line">        curr = nextNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    firstNode-&gt;next = prev;</span><br><span class="line">    firstNode = prev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(n)$</p>
+<p>空间复杂度为 $\Theta(1)$</p>
+<hr>
+<h2 id="31"><a href="#31" class="headerlink" title="31."></a>31.</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stack&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">(circularList&lt;T&gt; &amp;theList)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n = theList.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    std::stack&lt;T&gt; s;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = theList.<span class="built_in">begin</span>(); it != theList.<span class="built_in">end</span>(); ++it)</span><br><span class="line">    &#123;</span><br><span class="line">        s.<span class="built_in">push</span>(*it);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!theList.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        theList.<span class="built_in">erase</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> index = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (!s.<span class="built_in">empty</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        theList.<span class="built_in">insert</span>(index++, s.<span class="built_in">top</span>());</span><br><span class="line">        s.<span class="built_in">pop</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(n^2)$</p>
+<p>空间复杂度为 $\Theta(n)$</p>
+<hr>
+<h2 id="32"><a href="#32" class="headerlink" title="32."></a>32.</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">meld</span><span class="params">(<span class="type">const</span> circularList&lt;T&gt; &amp;a, <span class="type">const</span> circularList&lt;T&gt; &amp;b, circularList&lt;T&gt; &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    c.<span class="built_in">clear</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> itA = a.<span class="built_in">begin</span>();</span><br><span class="line">    <span class="keyword">auto</span> itB = b.<span class="built_in">begin</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (itA != a.<span class="built_in">end</span>() &amp;&amp; itB != b.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itA);</span><br><span class="line">        ++itA;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itB);</span><br><span class="line">        ++itB;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (itA != a.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itA);</span><br><span class="line">        ++itA;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (itB != b.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itB);</span><br><span class="line">        ++itB;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $O(a.listSize + b.listSize)$</p>
+<p>空间复杂度为 $O(a.listSize + b.listSize)$</p>
+<hr>
+<h2 id="39"><a href="#39" class="headerlink" title="39."></a>39.</h2><h3 id="15"><a href="#15" class="headerlink" title="(15)"></a>(15)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="type">void</span> circularListWithHeader&lt;T&gt;::<span class="built_in">reverse</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (listSize &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    chainNode&lt;T&gt; *prev = headerNode;</span><br><span class="line">    chainNode&lt;T&gt; *curr = headerNode-&gt;next;</span><br><span class="line">    chainNode&lt;T&gt; *nextNode = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (curr != headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        nextNode = curr-&gt;next;</span><br><span class="line">        curr-&gt;next = prev;</span><br><span class="line">        prev = curr;</span><br><span class="line">        curr = nextNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    headerNode-&gt;next = prev;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(n)$</p>
+<p>空间复杂度为 $\Theta(1)$</p>
+<h3 id="16"><a href="#16" class="headerlink" title="(16)"></a>(16)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">reverse</span><span class="params">(circularListWithHeader&lt;T&gt; &amp;theList)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n = theList.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    std::vector&lt;T&gt; elements;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = theList.<span class="built_in">begin</span>(); it != theList.<span class="built_in">end</span>(); ++it)</span><br><span class="line">    &#123;</span><br><span class="line">        elements.<span class="built_in">push_back</span>(*it);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    theList.<span class="built_in">clear</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">    &#123;</span><br><span class="line">        theList.<span class="built_in">push_back</span>(elements[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(n)$</p>
+<p>空间复杂度为 $\Theta(n)$</p>
+<hr>
+<h2 id="40"><a href="#40" class="headerlink" title="40."></a>40.</h2><h3 id="17"><a href="#17" class="headerlink" title="(17)"></a>(17)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">meld</span><span class="params">(<span class="type">const</span> circularListWithHeader&lt;T&gt; &amp;a,</span></span></span><br><span class="line"><span class="params"><span class="function">          <span class="type">const</span> circularListWithHeader&lt;T&gt; &amp;b,</span></span></span><br><span class="line"><span class="params"><span class="function">          circularListWithHeader&lt;T&gt; &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    c.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">auto</span> itA = a.<span class="built_in">begin</span>(), itB = b.<span class="built_in">begin</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (itA != a.<span class="built_in">end</span>() &amp;&amp; itB != b.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itA);</span><br><span class="line">        ++itA;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itB);</span><br><span class="line">        ++itB;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (itA != a.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itA);</span><br><span class="line">        ++itA;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (itB != b.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itB);</span><br><span class="line">        ++itB;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(m + n)$</p>
+<p>空间复杂度为 $\Theta(m + n)$</p>
+<h3 id="18"><a href="#18" class="headerlink" title="(18)"></a>(18)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="type">void</span> circularListWithHeader&lt;T&gt;::<span class="built_in">meld</span>(circularListWithHeader&lt;T&gt; &amp;a,</span><br><span class="line">                                     circularListWithHeader&lt;T&gt; &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == &amp;a || <span class="keyword">this</span> == &amp;b)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>-&gt;<span class="built_in">clear</span>();</span><br><span class="line"></span><br><span class="line">    chainNode&lt;T&gt; *pa = a.headerNode-&gt;next;</span><br><span class="line">    chainNode&lt;T&gt; *pb = b.headerNode-&gt;next;</span><br><span class="line">    chainNode&lt;T&gt; *last = <span class="keyword">this</span>-&gt;headerNode;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (pa != a.headerNode &amp;&amp; pb != b.headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        last-&gt;next = pa;</span><br><span class="line">        last = pa;</span><br><span class="line">        pa = pa-&gt;next;</span><br><span class="line"></span><br><span class="line">        last-&gt;next = pb;</span><br><span class="line">        last = pb;</span><br><span class="line">        pb = pb-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (pa != a.headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        last-&gt;next = pa;</span><br><span class="line">        last = pa;</span><br><span class="line">        pa = pa-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (pb != b.headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        last-&gt;next = pb;</span><br><span class="line">        last = pb;</span><br><span class="line">        pb = pb-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    last-&gt;next = <span class="keyword">this</span>-&gt;headerNode;</span><br><span class="line">    <span class="keyword">this</span>-&gt;listSize = a.listSize + b.listSize;</span><br><span class="line"></span><br><span class="line">    a.headerNode-&gt;next = a.headerNode;</span><br><span class="line">    a.listSize = <span class="number">0</span>;</span><br><span class="line">    b.headerNode-&gt;next = b.headerNode;</span><br><span class="line">    b.listSize = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(m + n)$</p>
+<p>空间复杂度为 $\Theta(1)$</p>
+<hr>
+<h2 id="41"><a href="#41" class="headerlink" title="41."></a>41.</h2><h3 id="19"><a href="#19" class="headerlink" title="(19)"></a>(19)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">const</span> circularListWithHeader&lt;T&gt; &amp;a,</span></span></span><br><span class="line"><span class="params"><span class="function">           <span class="type">const</span> circularListWithHeader&lt;T&gt; &amp;b,</span></span></span><br><span class="line"><span class="params"><span class="function">           circularListWithHeader&lt;T&gt; &amp;c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    c.<span class="built_in">clear</span>();</span><br><span class="line">    <span class="keyword">auto</span> itA = a.<span class="built_in">begin</span>(), itB = b.<span class="built_in">begin</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (itA != a.<span class="built_in">end</span>() &amp;&amp; itB != b.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (*itA &lt;= *itB)</span><br><span class="line">        &#123;</span><br><span class="line">            c.<span class="built_in">push_back</span>(*itA);</span><br><span class="line">            ++itA;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            c.<span class="built_in">push_back</span>(*itB);</span><br><span class="line">            ++itB;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (itA != a.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itA);</span><br><span class="line">        ++itA;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (itB != b.<span class="built_in">end</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        c.<span class="built_in">push_back</span>(*itB);</span><br><span class="line">        ++itB;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(m + n)$，空间复杂度为 $\Theta(m + n)$</p>
+<h3 id="20"><a href="#20" class="headerlink" title="(20)"></a>(20)</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> <span class="title class_">T</span>&gt;</span><br><span class="line"><span class="type">void</span> circularListWithHeader&lt;T&gt;::<span class="built_in">merge</span>(circularListWithHeader&lt;T&gt; &amp;a,</span><br><span class="line">                                      circularListWithHeader&lt;T&gt; &amp;b)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == &amp;a || <span class="keyword">this</span> == &amp;b)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>-&gt;<span class="built_in">clear</span>();</span><br><span class="line"></span><br><span class="line">    chainNode&lt;T&gt; *pa = a.headerNode-&gt;next;</span><br><span class="line">    chainNode&lt;T&gt; *pb = b.headerNode-&gt;next;</span><br><span class="line">    chainNode&lt;T&gt; *last = <span class="keyword">this</span>-&gt;headerNode;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (pa != a.headerNode &amp;&amp; pb != b.headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (pa-&gt;element &lt;= pb-&gt;element)</span><br><span class="line">        &#123;</span><br><span class="line">            last-&gt;next = pa;</span><br><span class="line">            last = pa;</span><br><span class="line">            pa = pa-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            last-&gt;next = pb;</span><br><span class="line">            last = pb;</span><br><span class="line">            pb = pb-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (pa != a.headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        last-&gt;next = pa;</span><br><span class="line">        last = pa;</span><br><span class="line">        pa = pa-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (pb != b.headerNode)</span><br><span class="line">    &#123;</span><br><span class="line">        last-&gt;next = pb;</span><br><span class="line">        last = pb;</span><br><span class="line">        pb = pb-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    last-&gt;next = <span class="keyword">this</span>-&gt;headerNode;</span><br><span class="line">    <span class="keyword">this</span>-&gt;listSize = a.listSize + b.listSize;</span><br><span class="line"></span><br><span class="line">    a.headerNode-&gt;next = a.headerNode;</span><br><span class="line">    a.listSize = <span class="number">0</span>;</span><br><span class="line">    b.headerNode-&gt;next = b.headerNode;</span><br><span class="line">    b.listSize = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $\Theta(m + n)$</p>
+<p>空间复杂度为 $\Theta(1)$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2019 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-snowflake"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder"><a href = "/" target = "_blank"> FRTI64 </a></span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"FRTI64/frti64-site-comment","repo_id":"R_kgDOJyQkYg","category":"Announcements","category_id":"DIC_kwDOJyQkYs4DFzOZ","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":1,"theme":"dark","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>
